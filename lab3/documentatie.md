@@ -136,6 +136,9 @@ Password: netmiko
 - **Huidige setup:** netmiko / netmiko
 
 **Screenshot:** [Verwijzing naar SSH verbindingsbewijs]
+<img width="760" height="431" alt="ssh-partt5" src="https://github.com/user-attachments/assets/314aaee1-149d-4bfa-931b-11962a053d6b" />
+<img width="716" height="217" alt="netconfig-session-part5" src="https://github.com/user-attachments/assets/d0d7ec01-8139-41c2-bdbc-787bf0fed69e" />
+
 
 ---
 
