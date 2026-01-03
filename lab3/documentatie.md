@@ -139,6 +139,29 @@ Password: netmiko
 <img width="760" height="431" alt="ssh-partt5" src="https://github.com/user-attachments/assets/314aaee1-149d-4bfa-931b-11962a053d6b" />
 <img width="716" height="217" alt="netconfig-session-part5" src="https://github.com/user-attachments/assets/d0d7ec01-8139-41c2-bdbc-787bf0fed69e" />
 
+---
+
+## Part 6: Use RESTCONF to Access an IOS XE Device
+
+### 1. Task Preparation and Implementation
+- RESTCONF endpoint: https://192.168.128.200/restconf
+- Authenticatie: basic auth (netmiko / netmiko)
+- Headers: `Accept: application/yang-data+json`, `Content-Type: application/yang-data+json`
+- GET ter verificatie (bijv. interfaces)
+- PUT/PATCH voor config update (bijv. Loopback description)
+
+### 2. Task Troubleshooting
+**Probleem:** PUT → 415 Unsupported Media Type  
+**Oorzaak:** Ontbrekende/juiste `Content-Type` header  
+**Oplossing:** Headers gezet op `application/yang-data+json` (zowel Accept als Content-Type) en body als geldige JSON verstuurd  
+**Resultaat:** ✅ PUT werkte na header fix
+
+### 3. Task Verification
+- ✅ GET bevestigt bereikbaarheid en dataformaat
+- ✅ PUT/PATCH geeft 2xx na correcte headers
+- ✅ Config change zichtbaar in opvolgende GET
+
+<img width="1170" height="452" alt="postmanget-part6" src="https://github.com/user-attachments/assets/3233fe1e-3d5a-4943-a0a8-dd4368e3d4e9" />
 
 ---
 
