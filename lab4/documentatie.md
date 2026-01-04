@@ -1,3 +1,18 @@
+# Task 36 – RESTCONF Python Automatisering
+
+## Doel
+Proberen een Python-automatiseringsoplossing te ontwikkelen die configuratie via RESTCONF toepast op een Cisco IOS-XE toestel met behulp van YANG-modellen, inclusief ondersteuning voor verschillende datastores (running, candidate, startup).
+
+## Probleem
+- De router **ondersteunde geen datastores** zoals verwacht.
+- RESTCONF-aanroepen naar de candidate- of startup-datastore faalden.
+- Hierdoor kon het script niet correct functioneren en was het niet mogelijk om configuraties idempotent toe te passen of commit-operaties uit te voeren.
+
+## Conclusie
+Taak 36 **werkt niet** omdat de target router geen ondersteuning biedt voor de vereiste datastores. Dit maakte de geplande automatisering onuitvoerbaar.
+
+---
+
 # Task 38 – RESTCONF Python Automatisering
 
 ## Doel
