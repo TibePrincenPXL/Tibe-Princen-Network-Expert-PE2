@@ -1,9 +1,9 @@
 {
-  "hostname": "R1",
+  "hostname": "R10",
   "loopbacks": [
     {
       "name": "Loopback0",
-      "ip": "10.0.0.1",
+      "ip": "10.0.0.10",
       "mask": "255.255.255.255"
     },
     {
@@ -15,7 +15,7 @@
   "ospf": {
     "process_id": 1,
     "networks": [
-      {"network": "10.0.0.1", "mask": "255.255.255.255", "area": 0},
+      {"network": "10.0.0.10", "mask": "255.255.255.255", "area": 0},
       {"network": "10.0.1.1", "mask": "255.255.255.255", "area": 0}
     ]
   }
