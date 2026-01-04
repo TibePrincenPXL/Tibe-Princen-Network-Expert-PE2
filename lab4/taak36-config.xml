@@ -1,0 +1,50 @@
+<config>
+  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+    <hostname>LabRouter36</hostname>
+
+    <!-- Loopback interfaces -->
+    <interface>
+      <Loopback>
+        <name>10</name>
+        <description>Loopback10</description>
+        <ip>
+          <address>
+            <primary>
+              <address>10.1.1.100</address>
+              <mask>255.255.255.255</mask>
+            </primary>
+          </address>
+        </ip>
+      </Loopback>
+      <Loopback>
+        <name>20</name>
+        <description>Loopback20</description>
+        <ip>
+          <address>
+            <primary>
+              <address>10.2.2.200</address>
+              <mask>255.255.255.255</mask>
+            </primary>
+          </address>
+        </ip>
+      </Loopback>
+    </interface>
+
+    <!-- OSPF routing -->
+    <router>
+      <ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
+        <id>1</id>
+        <network>
+          <ip>10.1.1.1</ip>
+          <mask>255.255.255.255</mask>
+          <area>0</area>
+        </network>
+        <network>
+          <ip>10.2.2.2</ip>
+          <mask>255.255.255.255</mask>
+          <area>0</area>
+        </network>
+      </ospf>
+    </router>
+  </native>
+</config>
